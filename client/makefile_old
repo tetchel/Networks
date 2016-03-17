@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS  = -g -O0 -Wall -Werror -std=gnu11 -lz
+
+all: client_tree.o client_main.o command_processor.o client_socket.o
+	$(CC) -o client client_tree.o client_main.o command_processor.o client_socket.o $(CFLAGS)
+	rm -f *.o *.a
+
+command_processor.o: ../common/command_processor.c ../common/command_processor.h
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+client_socket.o: client_socket.c client_socket.h
+	$(CC) $(CFLAGS) -o $@ -c $<

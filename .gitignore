@@ -1,0 +1,17 @@
+/testdir/
+/Debug/
+*/bin/
+/.settings/
+/obj/
+*.depend
+*.layout
+.cproject
+.project
+*.rb
+*.o
+*.a
+out.txt
+log.txt
+dump.rdb
+ValgrindOut.xml
+*.cbp
